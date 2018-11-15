@@ -21,12 +21,12 @@ class Dataset(torch.utils.data.Dataset):
         self._mnist = datasets.MNIST(path_to_data_dir, train=is_train, download=True)
 
     def __len__(self) -> int:
-        # TODO: CODE START
+        # TODO: CODE BEGIN
         raise NotImplementedError
         # TODO: CODE END
 
     def __getitem__(self, index) -> Tuple[Tensor, Tensor]:
-        # TODO: CODE START
+        # TODO: CODE BEGIN
         raise NotImplementedError
         # TODO: CODE END
 

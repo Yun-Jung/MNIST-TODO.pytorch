@@ -16,7 +16,7 @@ def _train(path_to_data_dir: str, path_to_checkpoints_dir: str):
     dataset = Dataset(path_to_data_dir, mode=Dataset.Mode.TRAIN)
     dataloader = DataLoader(dataset, batch_size=64, shuffle=True)
 
-    # TODO: CODE START
+    # TODO: CODE BEGIN
     raise NotImplementedError
     # model = XXX
     # optimizer = XXX
@@ -38,7 +38,7 @@ def _train(path_to_data_dir: str, path_to_checkpoints_dir: str):
             images = images.cuda()
             labels = labels.cuda()
 
-            # TODO: CODE START
+            # TODO: CODE BEGIN
             raise NotImplementedError
             # logits = XXX
             # loss = XXX

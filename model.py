@@ -10,17 +10,17 @@ class Model(nn.Module):
 
     def __init__(self):
         super().__init__()
-        # TODO: CODE START
+        # TODO: CODE BEGIN
         raise NotImplementedError
         # TODO: CODE END
 
     def forward(self, images: Tensor) -> Tensor:
-        # TODO: CODE START
+        # TODO: CODE BEGIN
         raise NotImplementedError
         # TODO: CODE END
 
     def loss(self, logits: Tensor, labels: Tensor) -> Tensor:
-        # TODO: CODE START
+        # TODO: CODE BEGIN
         raise NotImplementedError
         # TODO: CODE END
 
