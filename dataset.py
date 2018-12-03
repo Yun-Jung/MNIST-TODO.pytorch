@@ -22,12 +22,17 @@ class Dataset(torch.utils.data.Dataset):
 
     def __len__(self) -> int:
         # TODO: CODE BEGIN
-        raise NotImplementedError
+        #raise NotImplementedError
+        return len(self._mnist)
         # TODO: CODE END
 
     def __getitem__(self, index) -> Tuple[Tensor, Tensor]:
         # TODO: CODE BEGIN
-        raise NotImplementedError
+        #raise NotImplementedError
+        image = self._mnist[index][0]
+        image = self.preprocess(image)
+        label = self._mnist[index][1]
+        return image, label
         # TODO: CODE END
 
     @staticmethod

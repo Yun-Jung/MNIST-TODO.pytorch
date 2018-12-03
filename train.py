@@ -9,6 +9,8 @@ from torch.utils.data import DataLoader
 from dataset import Dataset
 from model import Model
 
+import torch.nn.functional as F
+import torch.optim as optim
 
 def _train(path_to_data_dir: str, path_to_checkpoints_dir: str):
     os.makedirs(path_to_checkpoints_dir, exist_ok=True)
@@ -17,9 +19,11 @@ def _train(path_to_data_dir: str, path_to_checkpoints_dir: str):
     dataloader = DataLoader(dataset, batch_size=64, shuffle=True)
 
     # TODO: CODE BEGIN
-    raise NotImplementedError
+    # raise NotImplementedError
     # model = XXX
+    model = Model().cuda()
     # optimizer = XXX
+    optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.5)
     # TODO: CODE END
 
     num_steps_to_display = 20
@@ -39,9 +43,11 @@ def _train(path_to_data_dir: str, path_to_checkpoints_dir: str):
             labels = labels.cuda()
 
             # TODO: CODE BEGIN
-            raise NotImplementedError
+            #raise NotImplementedError
             # logits = XXX
+            logits = model(images)
             # loss = XXX
+            loss = model.loss(logits, labels)
             # TODO: CODE END
 
             optimizer.zero_grad()
